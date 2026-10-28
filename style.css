@@ -1,0 +1,472 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #102342;
+    --blue: #2864d7;
+    --light-blue: #edf4ff;
+    --text: #263449;
+    --muted: #718096;
+    --white: #ffffff;
+    --border: #e1e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    color: white;
+    background:
+        radial-gradient(circle at 85% 15%, #447fe7 0, transparent 32%),
+        linear-gradient(135deg, #102342, #1b4b91);
+    min-height: 540px;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #e5edff;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1250px;
+    margin: 55px auto 0;
+    padding-bottom: 80px;
+}
+
+.eyebrow {
+    color: #4d83e8;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero .eyebrow {
+    color: #c2d6ff;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    max-width: 900px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #91baff;
+}
+
+.hero h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    color: #d8e5fb;
+    max-width: 730px;
+    margin-bottom: 22px;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #174a9c;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 6px 8px 0 0;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: #2a5ca3;
+    color: white;
+    border: 1px solid #7098d5;
+}
+
+.section {
+    max-width: 1250px;
+    width: 90%;
+    margin: auto;
+    padding: 65px 0;
+}
+
+.intro {
+    text-align: center;
+}
+
+.section h2 {
+    font-size: clamp(26px, 3vw, 36px);
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading > p:last-child,
+.intro > p:not(.eyebrow),
+.admissions > p:not(.eyebrow) {
+    color: var(--muted);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.stat {
+    background: white;
+    padding: 25px 15px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 5px 20px #1c315208;
+}
+
+.stat span {
+    display: block;
+    color: var(--blue);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.stat p {
+    color: var(--muted);
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.district-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.district-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.district-card span {
+    color: var(--blue);
+    font-size: 18px;
+}
+
+.district-card:hover {
+    border-color: var(--blue);
+    background: var(--light-blue);
+    transform: translateY(-2px);
+}
+
+.colleges-section {
+    max-width: none;
+    width: 100%;
+    padding: 65px 5%;
+    background: #edf2fa;
+}
+
+.colleges-section .section-heading,
+.college-grid {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.college-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.college-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 6px 20px #1428490b;
+    transition: 0.2s;
+}
+
+.college-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px #14284914;
+}
+
+.college-banner {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.banner-blue {
+    background: linear-gradient(135deg, #2258b4, #70a4fa);
+}
+
+.banner-purple {
+    background: linear-gradient(135deg, #4935a3, #9a8ae9);
+}
+
+.banner-green {
+    background: linear-gradient(135deg, #137b69, #72c7a5);
+}
+
+.banner-orange {
+    background: linear-gradient(135deg, #c35d28, #f1ad6c);
+}
+
+.college-body {
+    padding: 23px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #2357a8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.college-body h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.location {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.college-body > p:not(.location) {
+    color: #58667a;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.college-info {
+    background: #f7f9fd;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+.college-info span {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.college-info span:last-child {
+    border-bottom: none;
+}
+
+.college-info strong {
+    text-align: right;
+    font-size: 12px;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 4px;
+    background: var(--blue);
+    color: white;
+    border-radius: 7px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-link:hover {
+    background: #174ba8;
+}
+
+.admissions {
+    text-align: center;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.resource-card {
+    display: block;
+    background: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.resource-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-3px);
+}
+
+.resource-card > span {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.resource-card h3 {
+    color: var(--navy);
+    margin: 12px 0 8px;
+}
+
+.resource-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.resource-card b {
+    color: var(--blue);
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    background: var(--navy);
+    color: white;
+    padding: 35px 20px;
+}
+
+footer p {
+    color: #c7d4e9;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+    .district-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .college-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .hero-content {
+        margin-top: 35px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .district-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 0;
+    }
+
+    .colleges-section {
+        padding: 45px 5%;
+    }
+
+    .college-info span {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .college-info strong {
+        text-align: left;
+    }
+}
